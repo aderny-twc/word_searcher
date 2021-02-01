@@ -1,20 +1,22 @@
 {% extends 'base.html' %}
-{% block body %}
-<h2>{{ the_title }}</h2>
-<form action="/search4" method="POST">
-  <table>
-    <p>Use this form to submit a search request:</p>
-    <tr>
-      <td>Phrase</td>
-      <td><input type="TEXT" name="phrase" width="60"></td>
-    </tr>
-    <tr>
-      <td>Letters:</td>
-      <td><input type="TEXT" name="letters" value="aeiou"></td>
-    </tr>
-  </table>
-  <p>When you're ready, click this button:</p>
-  <p><input type="SUBMIT" value="Do it!"></p>
 
+{% block body %}
+<form action="/searcher" method="POST">
+    <h2>Use this form to submit a search request:</h2>
+
+    <div class="words_input">
+
+        <div class="input_desc">To search for words, enter them separated by commas ('one, two... ')<br>
+        To search for letters, enter a string without spaces ('aeiou... ') </div>
+        <input type="text" name="letters" value="aeiou">
+
+
+        <div class="input_desc">Search in text:</div>
+        <input type="text" name="phrase">
+
+        <div class="input_desc">When you're ready, click this button:</div>
+        <button class="search_btn" type="submit" value="Do it!">Do it!</button>
+        
+    </div>
 </form>
 {% endblock %}

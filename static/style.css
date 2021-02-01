@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.back {
+    min-height: 1080px;
+    background: url('bg.jpg') center center/cover no-repeat;
+    padding: 10% 0 15% 0;
+}
+
+.container {
+    background-attachment: fixed;
+    width: 1140px;
+    margin: 0 auto;
+    /* padding: 150px auto; */
+}
+
+.frame {
+    min-height: 400px;
+    background-color: #cee3ef;
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: 1px solid #373a3d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.frame h1 {
+    font-weight: 900;
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.frame form h2, .frame .output h2 {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.words_input, .words_output {
+    margin-top: 15px;
+    font-weight: 300;
+    font-size: 25px;
+}
+
+.words_input input, .words_output .output_box {
+    margin-top: 25px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+    padding: 6px 10px;
+    min-height: 40px;
+    width: 90%;
+    border-radius: 4px;
+    border: 1px solid #373a3d;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.words_input .search_btn {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 20px;
+    border-radius: .25rem;
+    transition: color .15s;
+    width: 200px;
+}
+
+.words_output .result {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+table {
+    font-size:          20px;
+    background-color:   #eeedf9;
+    border:             1px solid #909090;
+    color:              #2a2a2a;
+    padding:            5px 5px;
+    border-collapse:    collapse;
+}
+    
+td, th {
+    border: 1px solid black;
+}

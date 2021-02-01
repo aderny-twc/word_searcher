@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="output">
+    <h2>You submitted the following data:</h2>
+
+    <div class="words_output">
+
+        <div class="letters">Phrase/text:</div>
+        <div class="output_box">{{ the_phrase }}</div>
+
+        <div class="letters">Phrase/text:</div>
+        <div class="output_box">{{ the_phrase }}</div>
+
+        <div class="descr">The following results are returned:</div>
+
+        <div class="result">{{ the_results }}</div>
+        
+    </div>
+</div>
+{% endblock %}            
