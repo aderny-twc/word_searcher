@@ -55,6 +55,29 @@ def do_search() -> 'html':
                             the_letters=letters,
                             the_phrase=phrase,)
 
+@app.route('/viewlog')
+def viewlog() -> 'html':
+    try:
+        with UseDataBase(app.config['dbconfig']) as cursor:
+            _SQL = """SELECT phrase, letters, ip, browser_string, results
+                        FROM log"""
+            cursor.execute(_SQL)
+            contents = cursor.fetchall()
+
+        titles = ('Phrase', 'Letters', 'Remote_addr', 'User_agent', 'Result')
+        return render_template('viewlog.html',
+                                the_title='View Log',
+                                the_row_titles=titles,
+                                the_data=contents,)
+    except ConnectionError as err:
+        print('Is your database switched on? Error: ', str(err))
+    except CredentialsError as err:
+        print('User-id/Password issues. Error: ', str(err))
+    except SQLError as err:
+        print('Is your query correct?. Error: ', str(err))
+    except Exception as err:
+        print('Something went wrong: ', str(err))
+    return 'Error'
 
 if __name__ == '__main__':
     app.run(debug=True)
