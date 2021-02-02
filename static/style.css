@@ -81,6 +81,10 @@ html {
     width: 200px;
 }
 
+.words_input .search_btn:hover {
+	background-color: black;
+}
+
 .words_output .result {
     margin-top: 10px;
     margin-bottom: 15px;
