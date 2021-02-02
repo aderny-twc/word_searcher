@@ -41,7 +41,10 @@ def do_search() -> 'html':
 
     phrase = request.form['phrase']
     letters = request.form['letters']
-    results = str(search4letters(phrase, letters))
+    if len(letters.split()) > 1:
+        results = str(search4words(phrase, letters))
+    else:
+        results = str(search4letters(phrase, letters))
     try:
         t = Thread(target=log_request, args=(request, results))
         t.start()
