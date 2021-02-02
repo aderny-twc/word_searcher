@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, copy_current_request_context
 from threading import Thread
 
 from searchtext import search4letters, search4words
-from DBcm import *
+from db.mysqlcm import *
 
 
 app = Flask(__name__)
