@@ -4,32 +4,32 @@ A simple application based on an example from the book Head First. Updated front
 ## Project structure
 
 ```
-\WORD_SEARCHER
-│   .gitignore
-│   .screenshots
-│   README.md
-│   searchtext.py
-│   vsearch.py
-│   requirements.txt
-│
-├───static
-│       bg.jpg
-│       style.css
-│
-├───templates
-│       base.html
-│       entry.html
-│       results.html
-│       viewlog.html
+word_searcher/
+├── db
+│   ├── __init__.py
+│   ├── mysqlcm.py
+│   └── sqlitecm.py
+├── README.md
+├── requirements.txt
+├── searchtext.py
+├── static
+│   ├── bg.jpg
+│   └── style.css
+├── templates
+│   ├── base.html
+│   ├── entry.html
+│   ├── results.html
+│   └── viewlog.html
+└── vsearch.py
 ```
 
 ## URLs
 
 | route     | description                                      |
 | --------- | ------------------------------------------------ |
-| /         | main page (Form to fill)                         |
-| /searcher | result page (Search results by words or letters) |
-| /viewlog  | log page (All results with user information)     |
+| /         | Main page (form to fill)                         |
+| /searcher | Result page (search results by words or letters) |
+| /viewlog  | Log page (all results with user information)     |
 
 ### Main page
 
@@ -66,4 +66,5 @@ app.config['dbconfig'] = {'host': '127.0.0.1',
 (venv) python vsearch.py
 ```
 
-Runs at localhost address
+Runs at localhost address `http://127.0.0.1:5000/`
+
