@@ -51,7 +51,7 @@ $ source /venv/bin/activate
 
 ## Database configuration
 
-You need to create a database with these parameters by default (vsearch.py):
+You need to create a database (MySQL) with these parameters by default (vsearch.py):
 
 ```python
 app.config['dbconfig'] = {'host': '127.0.0.1',
