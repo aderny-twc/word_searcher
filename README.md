@@ -33,11 +33,11 @@ A simple application based on an example from the book Head First. Updated front
 
 ### Main page
 
-![](.screenshots\main_page.jpg)
+![](.screenshots/main_page.jpg)
 
 ### Result page
 
-![](.screenshots\search_res.jpg)
+![](.screenshots/search_res.jpg)
 
 ## Installation
 
