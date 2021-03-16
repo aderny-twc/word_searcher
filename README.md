@@ -45,7 +45,7 @@ word_searcher/
 $ git clone https://github.com/aderny-twc/word_searcher.git
 $ cd word_searcher
 $ python -m venv venv
-$ source /venv/bin/activate
+$ source venv/bin/activate
 (venv) pip install -r requirements.txt
 ```
 
